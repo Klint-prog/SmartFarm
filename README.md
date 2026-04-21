@@ -14,60 +14,51 @@
   <a href="#-tecnologias--tech-stack">Stack</a> •
   <a href="#-funcionalidades--features">Features</a> •
   <a href="#-como-executar--getting-started">Setup</a> •
+  <a href="#-arquitetura--architecture">Arquitetura</a> •
   <a href="#-licença--license">License</a>
 </p>
 
 <p align="center">
+  <img alt="PHP" src="https://img.shields.io/badge/PHP-7.0%2B-777BB4?style=flat-square&logo=php&logoColor=white"/>
+  <img alt="Symfony" src="https://img.shields.io/badge/Symfony-3.3-000000?style=flat-square&logo=symfony&logoColor=white"/>
+  <img alt="MySQL" src="https://img.shields.io/badge/MySQL-5.6-4479A1?style=flat-square&logo=mysql&logoColor=white"/>
+  <img alt="Docker" src="https://img.shields.io/badge/Docker-ready-2496ED?style=flat-square&logo=docker&logoColor=white"/>
+  <img alt="MQTT" src="https://img.shields.io/badge/IoT-MQTT-660066?style=flat-square"/>
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Klint-prog/SmartFarm?color=2ea44f&style=flat-square"/>
-  <img alt="GitHub forks" src="https://img.shields.io/github/forks/Klint-prog/SmartFarm?color=4caf50&style=flat-square"/>
-  <img alt="GitHub stars" src="https://img.shields.io/github/stars/Klint-prog/SmartFarm?color=66bb6a&style=flat-square"/>
   <img alt="License" src="https://img.shields.io/github/license/Klint-prog/SmartFarm?color=1b5e20&style=flat-square"/>
   <img alt="Status" src="https://img.shields.io/badge/status-ativo%20%2F%20active-brightgreen?style=flat-square"/>
 </p>
 
 ---
 
-## 🇧🇷 Sobre o Projeto / About the Project
+## 🇧🇷 Sobre o Projeto
 
-**SmartFarm** é uma plataforma completa de gestão agrícola inteligente que integra **aplicação web**, **app mobile** e **dispositivos IoT** para oferecer ao produtor rural uma visão em tempo real da sua propriedade — do campo ao painel de controle.
+**SmartFarm** é uma plataforma de gestão agrícola inteligente que integra controle de fazendas, áreas, plantios, tarefas, inventário e dispositivos IoT em um único painel web. A plataforma permite ao produtor rural gerenciar toda a operação — do campo ao dashboard — com leituras de sensores em tempo real via protocolo MQTT.
 
-O projeto nasceu da necessidade de modernizar e digitalizar a gestão rural, tornando dados de sensores, controle de safras e monitoramento de recursos acessíveis de qualquer lugar.
-
-> Este repositório é um fork ativamente mantido do projeto original, com novas funcionalidades, correções e melhorias contínuas.
-
----
+> Este repositório é um fork ativamente mantido do projeto original [Tania (Tanibox)](https://github.com/tanibox/tania), com nova identidade visual, correções, melhorias e roadmap de modernização.
 
 ## 🇺🇸 About the Project
 
-**SmartFarm** is a full-stack precision agriculture platform integrating a **web dashboard**, **mobile app**, and **IoT devices** to give farmers real-time visibility of their entire operation — from the field to the control panel.
+**SmartFarm** is a precision agriculture management platform integrating farm control, areas, crop tracking, task management, inventory, and IoT devices in a single web dashboard. It allows farmers to manage their entire operation — from the field to the dashboard — with real-time sensor readings via the MQTT protocol.
 
-The project was born from the need to digitize and modernize rural management, making sensor data, crop tracking, and resource monitoring accessible from anywhere.
-
-> This repository is an actively maintained fork of the original project, with new features, fixes, and continuous improvements.
+> This repository is an actively maintained fork of the original [Tania (Tanibox)](https://github.com/tanibox/tania) project, with new visual identity, fixes, improvements, and a modernization roadmap.
 
 ---
 
 ## 🧩 Funcionalidades / Features
 
-### 🇧🇷
-- 📊 **Dashboard web** — painel de controle em tempo real com gráficos e alertas
-- 📱 **App mobile** — acesso remoto para monitoramento no campo
-- 🌡️ **Integração IoT** — leitura de sensores (temperatura, umidade, irrigação)
-- 🗺️ **Mapa da propriedade** — visualização geoespacial de talhões
-- 📅 **Gestão de safras** — planejamento, histórico e estimativas de colheita
-- 💧 **Controle de irrigação** — automação e agendamento inteligente
-- 🔔 **Alertas e notificações** — avisos por condições climáticas e leituras críticas
-- 🔐 **Autenticação segura** — controle de acesso por perfil (admin, operador, visualizador)
-
-### 🇺🇸
-- 📊 **Web Dashboard** — real-time control panel with charts and alerts
-- 📱 **Mobile App** — remote access for field monitoring
-- 🌡️ **IoT Integration** — sensor readings (temperature, humidity, irrigation)
-- 🗺️ **Farm Map** — geospatial visualization of crop zones
-- 📅 **Crop Management** — planning, history, and harvest estimates
-- 💧 **Irrigation Control** — automation and smart scheduling
-- 🔔 **Alerts & Notifications** — weather and critical reading warnings
-- 🔐 **Secure Authentication** — role-based access control (admin, operator, viewer)
+| Módulo | Descrição / Description |
+|--------|------------------------|
+| 🏠 **Dashboard** | Painel geral com stats e leituras IoT em tempo real / Overview panel with real-time IoT stats |
+| 🌾 **Fazendas** | Cadastro e gestão de fazendas (Fields) / Farm registration and management |
+| 📐 **Áreas** | Subdivisão de fazendas em áreas de cultivo / Subdivision of farms into crop areas |
+| 🌱 **Plantas** | Registro de plantios, acompanhamento e colheita / Crop planting, tracking and harvest |
+| 🗂️ **Inventário** | Gestão de sementes e categorias / Seed and category management |
+| ✅ **Tarefas** | Criação e acompanhamento de tarefas por área / Task creation and tracking per area |
+| 💧 **Reservatórios** | Controle de reservatórios d'água por área / Water reservoir control per area |
+| 📡 **Dispositivos IoT** | Cadastro de sensores, recursos e vinculação com áreas via MQTT / Sensor registration and MQTT area linking |
+| ⚙️ **Configurações** | Configurações gerais da plataforma / Platform general settings |
+| 👤 **Usuários** | Autenticação, registro, perfil e recuperação de senha / Auth, registration, profile, password reset |
 
 ---
 
@@ -75,13 +66,17 @@ The project was born from the need to digitize and modernize rural management, m
 
 | Camada / Layer | Tecnologia / Technology |
 |---|---|
-| **Frontend Web** | [Next.js](https://nextjs.org/) + React + Tailwind CSS |
-| **Mobile** | React Native / Expo |
-| **Backend / API** | Node.js + REST API |
-| **Banco de Dados / Database** | PostgreSQL + MongoDB |
-| **IoT / Hardware** | MQTT Protocol + Arduino / ESP32 |
-| **Auth** | JWT + OAuth2 |
-| **Deploy** | Docker + Vercel / Railway |
+| **Backend** | PHP 7.0+ + Symfony 3.3 |
+| **ORM** | Doctrine ORM 2.5 + Doctrine Migrations |
+| **Banco de Dados** | MySQL 5.6 |
+| **Autenticação** | FOSUserBundle ~2.0 |
+| **Templates** | Twig 1.x / 2.x |
+| **Frontend** | Bootstrap 3 + jQuery + jQuery UI |
+| **IoT / MQTT** | Paho MQTT JS (browser client) |
+| **Upload** | VichUploaderBundle |
+| **Email** | SwiftMailer |
+| **Testes** | PHPUnit 6.2 |
+| **Containerização** | Docker + Nginx |
 
 ---
 
@@ -89,22 +84,46 @@ The project was born from the need to digitize and modernize rural management, m
 
 ```
 SmartFarm/
-├── web/                  # Next.js dashboard
-│   ├── app/
-│   ├── components/
-│   └── public/
-├── mobile/               # React Native app
-│   ├── src/
-│   └── assets/
-├── api/                  # Backend / REST API
-│   ├── controllers/
-│   ├── models/
-│   └── routes/
-├── iot/                  # Firmware e scripts IoT
-│   └── sensors/
-├── docs/                 # Documentação / Documentation
-└── docker-compose.yml
+├── app/
+│   ├── config/              # Configurações Symfony (routing, security, services)
+│   ├── DoctrineMigrations/  # 10 migrations do banco de dados
+│   └── Resources/views/     # Templates Twig por módulo
+│
+├── src/AppBundle/
+│   ├── Controller/          # 11 controllers (lógica de negócio)
+│   ├── Entity/              # 12 entidades Doctrine (modelos de dados)
+│   ├── Form/                # 12 formulários Symfony
+│   ├── Repository/          # Queries customizadas
+│   └── DataFixtures/        # Seeds para ambiente de desenvolvimento
+│
+├── web/
+│   ├── assets/              # CSS, JS, fontes, imagens
+│   └── uploads/             # Arquivos enviados pelos usuários
+│
+├── tests/                   # Testes funcionais (8 controllers)
+├── docker/                  # Dockerfile + Nginx config
+├── docker-compose.yml       # Ambiente de produção
+└── docker-compose.dev.yml   # Ambiente de desenvolvimento
 ```
+
+> 📄 Veja a documentação completa da arquitetura em [`ARCHITECTURE.md`](./ARCHITECTURE.md)
+
+---
+
+## 🗺️ Rotas Principais / Main Routes
+
+| Rota | Módulo |
+|------|--------|
+| `/` | Dashboard |
+| `/farms` | Fazendas |
+| `/areas` | Áreas |
+| `/plants` | Plantas |
+| `/inventories` `/seeds` | Inventário |
+| `/tasks` | Tarefas |
+| `/reservoirs` | Reservatórios |
+| `/devices` | Dispositivos IoT |
+| `/settings` | Configurações |
+| `/login` `/register` | Autenticação |
 
 ---
 
@@ -112,61 +131,58 @@ SmartFarm/
 
 ### Pré-requisitos / Prerequisites
 
-- Node.js `>= 18`
-- PostgreSQL `>= 14`
-- MongoDB `>= 6`
-- Docker (opcional / optional)
+- Docker + Docker Compose
+- **ou** PHP >= 7.0 + Composer + MySQL 5.6
 
 ---
 
-### 🇧🇷 Executando localmente
+### 🐳 Com Docker (recomendado / recommended)
 
 ```bash
 # 1. Clone o repositório
 git clone https://github.com/Klint-prog/SmartFarm.git
 cd SmartFarm
 
-# 2. Configure as variáveis de ambiente
-cp .env.example .env
-# Edite o arquivo .env com suas credenciais
+# 2. Copie e configure as variáveis de ambiente
+cp .env-example .env
+# Edite o .env com suas credenciais
 
-# 3. Suba a API
-cd api
-npm install
-npm run dev
+# 3. Suba os containers
+docker-compose -f docker-compose.dev.yml up --build
 
-# 4. Suba o frontend web
-cd ../web
-npm install
-npm run dev
+# 4. Em outro terminal, rode as migrations
+docker exec -it smartfarm_app php bin/console doctrine:migrations:migrate
 
-# 5. (Opcional) Rode tudo com Docker
-docker-compose up --build
+# 5. (Opcional) Carregue dados de exemplo
+docker exec -it smartfarm_app php bin/console doctrine:fixtures:load
+
+# Acesse: http://localhost
 ```
 
-### 🇺🇸 Running locally
+---
+
+### 💻 Sem Docker (manual)
 
 ```bash
-# 1. Clone the repository
+# 1. Clone e instale dependências PHP
 git clone https://github.com/Klint-prog/SmartFarm.git
 cd SmartFarm
+composer install
 
-# 2. Set up environment variables
-cp .env.example .env
-# Edit .env with your credentials
+# 2. Configure o banco de dados em app/config/parameters.yml
+# (gerado automaticamente pelo composer install)
 
-# 3. Start the API
-cd api
-npm install
-npm run dev
+# 3. Crie o banco e rode as migrations
+php bin/console doctrine:database:create
+php bin/console doctrine:migrations:migrate
 
-# 4. Start the web frontend
-cd ../web
-npm install
-npm run dev
+# 4. (Opcional) Dados de exemplo
+php bin/console doctrine:fixtures:load
 
-# 5. (Optional) Run everything with Docker
-docker-compose up --build
+# 5. Suba o servidor
+php bin/console server:run
+
+# Acesse: http://localhost:8000
 ```
 
 ---
@@ -174,33 +190,78 @@ docker-compose up --build
 ## 🌍 Variáveis de Ambiente / Environment Variables
 
 ```env
-# Database
-DATABASE_URL=postgresql://user:password@localhost:5432/smartfarm
-MONGO_URI=mongodb://localhost:27017/smartfarm
+SYMFONY_LOCALE=pt_BR
+SYMFONY_SECRET=sua_chave_secreta_aqui
+SYMFONY_ENV=dev
 
-# Auth
-JWT_SECRET=your_jwt_secret
+# Banco de dados
+SYMFONY_DB_HOST=localhost
+SYMFONY_DB_PORT=3306
+SYMFONY_DB_NAME=smartfarm
+SYMFONY_DB_USERNAME=smartfarm
+SYMFONY_DB_PASSWORD=sua_senha
 
-# IoT
-MQTT_BROKER_URL=mqtt://localhost:1883
-
-# App
-NEXT_PUBLIC_API_URL=http://localhost:3001
+# Email (para recuperação de senha)
+SYMFONY_MAILER_TRANSPORT=smtp
+SYMFONY_MAILER_HOST=smtp.gmail.com
+SYMFONY_MAILER_USERNAME=seu@email.com
+SYMFONY_MAILER_PASSWORD=sua_senha
+SYMFONY_MAILER_FROM_ADDRESS=seu@email.com
+SYMFONY_MAILER_SENDER_NAME=SmartFarm
 ```
 
 ---
 
-## 🗺️ Roadmap
+## 🏗️ Arquitetura / Architecture
 
-- [x] Dashboard web responsivo
-- [x] Autenticação e controle de acesso
-- [x] Integração com banco de dados
+O sistema segue o padrão **MVC** do Symfony com as seguintes camadas:
+
+```
+Browser / App Mobile
+       │
+       ▼
+  Twig Templates  ◄──  Controllers  ──►  Doctrine ORM  ──►  MySQL
+                            │
+                            ▼
+                     MQTT (Paho JS)  ◄──►  Dispositivos IoT
+```
+
+A integração IoT funciona via **MQTT no browser**: o cliente Paho JS se conecta ao broker MQTT e recebe leituras dos sensores em tempo real, exibidas no dashboard.
+
+> Para detalhes completos de entidades, rotas, migrations e roadmap de modernização, consulte [`ARCHITECTURE.md`](./ARCHITECTURE.md).
+
+---
+
+## 🔄 Roadmap
+
+- [x] Gestão de fazendas e áreas
+- [x] Controle de plantios e colheitas
+- [x] Inventário de sementes
+- [x] Gestão de tarefas
+- [x] Integração IoT via MQTT
+- [x] Controle de reservatórios
+- [ ] Atualização para Symfony 6.x + PHP 8.2
+- [ ] API REST com autenticação JWT
+- [ ] Frontend moderno (Next.js / React)
 - [ ] App mobile (React Native)
-- [ ] Integração MQTT com sensores reais
-- [ ] Módulo de relatórios em PDF
-- [ ] Notificações push
-- [ ] Suporte multilíngue (i18n)
-- [ ] PWA (Progressive Web App)
+- [ ] Broker MQTT dedicado (Mosquitto)
+- [ ] Séries temporais para dados de sensores
+- [ ] Notificações push e alertas automáticos
+- [ ] Suporte multilíngue completo (PT-BR + EN)
+
+---
+
+## 🧪 Testes / Tests
+
+```bash
+# Rodar todos os testes
+php bin/phpunit
+
+# Com Docker
+docker exec -it smartfarm_app php bin/phpunit
+```
+
+Cobertura atual: `AreaController`, `DashboardController`, `DeviceController`, `FieldController`, `InventoryController`, `PlantController`, `ReservoirController`, `TaskController`
 
 ---
 
@@ -211,45 +272,40 @@ Contribuições são muito bem-vindas! Este projeto está ativamente mantido.
 
 1. Faça um **fork** do projeto
 2. Crie uma branch: `git checkout -b feature/minha-feature`
-3. Faça commit das suas mudanças: `git commit -m 'feat: adiciona minha feature'`
-4. Envie para a branch: `git push origin feature/minha-feature`
-5. Abra um **Pull Request**
+3. Faça commit: `git commit -m 'feat: adiciona minha feature'`
+4. Push: `git push origin feature/minha-feature`
+5. Abra um **Pull Request** para o branch `development`
 
-Por favor, siga o padrão de commits [Conventional Commits](https://www.conventionalcommits.org/).
+Siga o padrão [Conventional Commits](https://www.conventionalcommits.org/).
 
 ### 🇺🇸
 Contributions are very welcome! This project is actively maintained.
 
 1. **Fork** the project
 2. Create your branch: `git checkout -b feature/my-feature`
-3. Commit your changes: `git commit -m 'feat: add my feature'`
-4. Push to the branch: `git push origin feature/my-feature`
-5. Open a **Pull Request**
+3. Commit: `git commit -m 'feat: add my feature'`
+4. Push: `git push origin feature/my-feature`
+5. Open a **Pull Request** to the `development` branch
 
-Please follow the [Conventional Commits](https://www.conventionalcommits.org/) standard.
-
----
-
-## 📸 Screenshots
-
-> 🚧 Em breve / Coming soon — adicione capturas de tela da interface na pasta `docs/screenshots/`
+Please follow [Conventional Commits](https://www.conventionalcommits.org/).
 
 ---
 
 ## 📄 Licença / License
 
-Distribuído sob a licença **MIT**. Veja o arquivo [`LICENSE`](./LICENSE) para mais detalhes.  
-Distributed under the **MIT** License. See [`LICENSE`](./LICENSE) for more information.
+Distribuído sob a licença **Apache 2.0** (herdada do projeto original Tania).  
+Distributed under the **Apache 2.0** License (inherited from the original Tania project).
+
+Veja [`LICENSE`](./LICENSE) para mais detalhes.
 
 ---
 
 ## 👤 Autor / Author
 
-<p>
-  Desenvolvido e mantido por / Developed and maintained by:
-  <br/>
-  <strong>Klint-prog</strong> — <a href="https://github.com/Klint-prog">github.com/Klint-prog</a>
-</p>
+Fork desenvolvido e mantido por / Fork developed and maintained by:  
+**Klint-prog** — [github.com/Klint-prog](https://github.com/Klint-prog)
+
+Projeto original / Original project: [Tanibox/Tania](https://github.com/tanibox/tania)
 
 ---
 
