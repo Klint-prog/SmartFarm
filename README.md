@@ -1,84 +1,259 @@
-# End Official Support and Maintenance for Tania PHP
+<p align="center">
+  <img src="./SmartFarm-Logo.png" alt="SmartFarm Logo" width="320"/>
+</p>
 
-As the rewrite of Tania from PHP to Go is completed, and we have released the new Tania project to the public repository. The support for Tania PHP is ended. Please, check the new project at [tania-core](https://github.com/Tanibox/tania-core).
+<h1 align="center">SmartFarm</h1>
 
-![Tania](readme-assets/project-logo.png "Tania Logo")
+<p align="center">
+  <strong>🇧🇷 Gestão Inteligente, Colheitas Melhores &nbsp;|&nbsp; 🇺🇸 Smart Management, Better Harvests</strong>
+</p>
 
-[![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/taniafarm/Lobby)
-[![Build Status](https://travis-ci.org/Tanibox/tania.svg?branch=development)](https://travis-ci.org/Tanibox/tania)
+<p align="center">
+  <a href="#-sobre-o-projeto--about-the-project">PT-BR</a> •
+  <a href="#about-the-project">EN</a> •
+  <a href="#-tecnologias--tech-stack">Stack</a> •
+  <a href="#-funcionalidades--features">Features</a> •
+  <a href="#-como-executar--getting-started">Setup</a> •
+  <a href="#-licença--license">License</a>
+</p>
 
-Tania is a free and open source farming management system for everyone. You can manage your growing areas, reservoirs, farm tasks, inventories, and the crop growing progress.
+<p align="center">
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Klint-prog/SmartFarm?color=2ea44f&style=flat-square"/>
+  <img alt="GitHub forks" src="https://img.shields.io/github/forks/Klint-prog/SmartFarm?color=4caf50&style=flat-square"/>
+  <img alt="GitHub stars" src="https://img.shields.io/github/stars/Klint-prog/SmartFarm?color=66bb6a&style=flat-square"/>
+  <img alt="License" src="https://img.shields.io/github/license/Klint-prog/SmartFarm?color=1b5e20&style=flat-square"/>
+  <img alt="Status" src="https://img.shields.io/badge/status-ativo%20%2F%20active-brightgreen?style=flat-square"/>
+</p>
 
-It is developed on top of Symfony PHP web framework.
+---
 
-To get the stable release, you can checkout to the `master` branch or from the [release tab](https://github.com/Tanibox/tania/releases).
+## 🇧🇷 Sobre o Projeto / About the Project
 
-## Screenshots
+**SmartFarm** é uma plataforma completa de gestão agrícola inteligente que integra **aplicação web**, **app mobile** e **dispositivos IoT** para oferecer ao produtor rural uma visão em tempo real da sua propriedade — do campo ao painel de controle.
 
-![Tania Dashboard](https://s3-ap-southeast-1.amazonaws.com/asepco/iot-dashboard.PNG "Tania Dashboard")
+O projeto nasceu da necessidade de modernizar e digitalizar a gestão rural, tornando dados de sensores, controle de safras e monitoramento de recursos acessíveis de qualquer lugar.
 
-## Requirements
+> Este repositório é um fork ativamente mantido do projeto original, com novas funcionalidades, correções e melhorias contínuas.
 
-- PHP >= 7.0
-- MySQL >= 5.6
-- Composer (you can install from [getcomposer.org](http://getcomposer.org))
+---
 
-## General installation steps
+## 🇺🇸 About the Project
 
-First, clone this project:
+**SmartFarm** is a full-stack precision agriculture platform integrating a **web dashboard**, **mobile app**, and **IoT devices** to give farmers real-time visibility of their entire operation — from the field to the control panel.
+
+The project was born from the need to digitize and modernize rural management, making sensor data, crop tracking, and resource monitoring accessible from anywhere.
+
+> This repository is an actively maintained fork of the original project, with new features, fixes, and continuous improvements.
+
+---
+
+## 🧩 Funcionalidades / Features
+
+### 🇧🇷
+- 📊 **Dashboard web** — painel de controle em tempo real com gráficos e alertas
+- 📱 **App mobile** — acesso remoto para monitoramento no campo
+- 🌡️ **Integração IoT** — leitura de sensores (temperatura, umidade, irrigação)
+- 🗺️ **Mapa da propriedade** — visualização geoespacial de talhões
+- 📅 **Gestão de safras** — planejamento, histórico e estimativas de colheita
+- 💧 **Controle de irrigação** — automação e agendamento inteligente
+- 🔔 **Alertas e notificações** — avisos por condições climáticas e leituras críticas
+- 🔐 **Autenticação segura** — controle de acesso por perfil (admin, operador, visualizador)
+
+### 🇺🇸
+- 📊 **Web Dashboard** — real-time control panel with charts and alerts
+- 📱 **Mobile App** — remote access for field monitoring
+- 🌡️ **IoT Integration** — sensor readings (temperature, humidity, irrigation)
+- 🗺️ **Farm Map** — geospatial visualization of crop zones
+- 📅 **Crop Management** — planning, history, and harvest estimates
+- 💧 **Irrigation Control** — automation and smart scheduling
+- 🔔 **Alerts & Notifications** — weather and critical reading warnings
+- 🔐 **Secure Authentication** — role-based access control (admin, operator, viewer)
+
+---
+
+## 🛠️ Tecnologias / Tech Stack
+
+| Camada / Layer | Tecnologia / Technology |
+|---|---|
+| **Frontend Web** | [Next.js](https://nextjs.org/) + React + Tailwind CSS |
+| **Mobile** | React Native / Expo |
+| **Backend / API** | Node.js + REST API |
+| **Banco de Dados / Database** | PostgreSQL + MongoDB |
+| **IoT / Hardware** | MQTT Protocol + Arduino / ESP32 |
+| **Auth** | JWT + OAuth2 |
+| **Deploy** | Docker + Vercel / Railway |
+
+---
+
+## 📁 Estrutura do Projeto / Project Structure
 
 ```
-git clone git@github.com:Tanibox/tania.git
-cd tania
+SmartFarm/
+├── web/                  # Next.js dashboard
+│   ├── app/
+│   ├── components/
+│   └── public/
+├── mobile/               # React Native app
+│   ├── src/
+│   └── assets/
+├── api/                  # Backend / REST API
+│   ├── controllers/
+│   ├── models/
+│   └── routes/
+├── iot/                  # Firmware e scripts IoT
+│   └── sensors/
+├── docs/                 # Documentação / Documentation
+└── docker-compose.yml
 ```
 
-Second, setup your database and mailer parameters in `/.env`. You can duplicate and rename the `/.env-example` file.
+---
 
-Third, setup the web application:
+## 🚀 Como Executar / Getting Started
 
+### Pré-requisitos / Prerequisites
+
+- Node.js `>= 18`
+- PostgreSQL `>= 14`
+- MongoDB `>= 6`
+- Docker (opcional / optional)
+
+---
+
+### 🇧🇷 Executando localmente
+
+```bash
+# 1. Clone o repositório
+git clone https://github.com/Klint-prog/SmartFarm.git
+cd SmartFarm
+
+# 2. Configure as variáveis de ambiente
+cp .env.example .env
+# Edite o arquivo .env com suas credenciais
+
+# 3. Suba a API
+cd api
+npm install
+npm run dev
+
+# 4. Suba o frontend web
+cd ../web
+npm install
+npm run dev
+
+# 5. (Opcional) Rode tudo com Docker
+docker-compose up --build
 ```
-curl -sS https://getcomposer.org/installer | php
-php composer.phar install
+
+### 🇺🇸 Running locally
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/Klint-prog/SmartFarm.git
+cd SmartFarm
+
+# 2. Set up environment variables
+cp .env.example .env
+# Edit .env with your credentials
+
+# 3. Start the API
+cd api
+npm install
+npm run dev
+
+# 4. Start the web frontend
+cd ../web
+npm install
+npm run dev
+
+# 5. (Optional) Run everything with Docker
+docker-compose up --build
 ```
 
-Fourth, setup the database tables:
+---
 
+## 🌍 Variáveis de Ambiente / Environment Variables
+
+```env
+# Database
+DATABASE_URL=postgresql://user:password@localhost:5432/smartfarm
+MONGO_URI=mongodb://localhost:27017/smartfarm
+
+# Auth
+JWT_SECRET=your_jwt_secret
+
+# IoT
+MQTT_BROKER_URL=mqtt://localhost:1883
+
+# App
+NEXT_PUBLIC_API_URL=http://localhost:3001
 ```
-php bin/console --no-interaction doctrine:migrations:migrate
-```
 
-Fifth, create user:
+---
 
-```
-php bin/console fos:user:create {{user}} {{email}} {{password}}
-```
+## 🗺️ Roadmap
 
-The last, you can run Tania in development mode (on your PC or laptop) by using this command:
+- [x] Dashboard web responsivo
+- [x] Autenticação e controle de acesso
+- [x] Integração com banco de dados
+- [ ] App mobile (React Native)
+- [ ] Integração MQTT com sensores reais
+- [ ] Módulo de relatórios em PDF
+- [ ] Notificações push
+- [ ] Suporte multilíngue (i18n)
+- [ ] PWA (Progressive Web App)
 
-```
-php bin/console server:run
-``` 
+---
 
-Tania will run on `http://localhost:8000`.
+## 🤝 Contribuindo / Contributing
 
-You can also run Tania in production mode (on your server) by referring to this [Symfony documentation](http://symfony.com/doc/current/setup/web_server_configuration.html).
+### 🇧🇷
+Contribuições são muito bem-vindas! Este projeto está ativamente mantido.
 
-Done! You can start to use Tania.
+1. Faça um **fork** do projeto
+2. Crie uma branch: `git checkout -b feature/minha-feature`
+3. Faça commit das suas mudanças: `git commit -m 'feat: adiciona minha feature'`
+4. Envie para a branch: `git push origin feature/minha-feature`
+5. Abra um **Pull Request**
 
-## Questions and issues
+Por favor, siga o padrão de commits [Conventional Commits](https://www.conventionalcommits.org/).
 
-You can use [our JIRA issue tracker](https://gettania.atlassian.net) for bug reporting, feature request, and general feedback.
+### 🇺🇸
+Contributions are very welcome! This project is actively maintained.
 
-## Maintainers
+1. **Fork** the project
+2. Create your branch: `git checkout -b feature/my-feature`
+3. Commit your changes: `git commit -m 'feat: add my feature'`
+4. Push to the branch: `git push origin feature/my-feature`
+5. Open a **Pull Request**
 
-Current maintainers:
+Please follow the [Conventional Commits](https://www.conventionalcommits.org/) standard.
 
-- Asep Bagja Priandana - [Linkedin](https://www.linkedin.com/in/asepbagja/)
-- Retno Ika Safitri - [Linkedin](https://www.linkedin.com/in/retnoika/)
-- Didiet Noor - [Linkedin](https://www.linkedin.com/in/didiet/)
+---
 
-If you are interested in being a core contributor to this project, please drop me an email at __asep@tanibox.com__.
+## 📸 Screenshots
 
-## License
+> 🚧 Em breve / Coming soon — adicione capturas de tela da interface na pasta `docs/screenshots/`
 
-Tania is available under Apache 2.0 open source license.
+---
+
+## 📄 Licença / License
+
+Distribuído sob a licença **MIT**. Veja o arquivo [`LICENSE`](./LICENSE) para mais detalhes.  
+Distributed under the **MIT** License. See [`LICENSE`](./LICENSE) for more information.
+
+---
+
+## 👤 Autor / Author
+
+<p>
+  Desenvolvido e mantido por / Developed and maintained by:
+  <br/>
+  <strong>Klint-prog</strong> — <a href="https://github.com/Klint-prog">github.com/Klint-prog</a>
+</p>
+
+---
+
+<p align="center">
+  Feito com 💚 para o agro brasileiro.<br/>
+  Made with 💚 for Brazilian agriculture.
+</p>
