@@ -22,8 +22,8 @@ RUN apt-get update \
     && docker-php-ext-install pdo pdo_mysql intl zip \
     && rm -rf /var/lib/apt/lists/*
 
-# Composer v1 is required by the project's lock file/plugins.
-COPY --from=composer:1 /usr/bin/composer /usr/bin/composer
+# Composer
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 # PHP-FPM to unix socket (compatible with nginx.conf)
 RUN mkdir -p /var/run/php \
