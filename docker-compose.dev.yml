@@ -1,12 +1,8 @@
-
-version: '2.2'
-
 services:
-
   app:
-    image: tanibox/tania:latest
+    image: smartfarm/app:dev
     build:
-      dockerfile: docker/app/Dockerfile 
+      dockerfile: docker/app/Dockerfile
       context: .
     environment:
       SYMFONY_LOCALE: en
@@ -14,9 +10,9 @@ services:
       SYMFONY_ENV: dev
       SYMFONY_DB_HOST: db
       SYMFONY_DB_PORT: 3306
-      SYMFONY_DB_NAME: tania
-      SYMFONY_DB_USERNAME: tania
-      SYMFONY_DB_PASSWORD: taniapass
+      SYMFONY_DB_NAME: smartfarm
+      SYMFONY_DB_USERNAME: smartfarm
+      SYMFONY_DB_PASSWORD: smartfarmpass
       SYMFONY_MAILER_TRANSPORT: smtp
       SYMFONY_MAILER_HOST: 127.0.0.1
       SYMFONY_MAILER_USERNAME: admin
@@ -28,13 +24,14 @@ services:
       - "80:80"
     volumes:
       - '.:/var/www'
-      - '$HOME/.composer:/var/www/.composer' 
+      - '$HOME/.composer:/var/www/.composer'
+
   db:
     image: 'mysql:5.6'
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: tania
-      MYSQL_USER: tania
-      MYSQL_PASSWORD: taniapass
+      MYSQL_DATABASE: smartfarm
+      MYSQL_USER: smartfarm
+      MYSQL_PASSWORD: smartfarmpass
     ports:
       - "3306:3306"
