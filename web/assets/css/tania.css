@@ -378,3 +378,90 @@ a:hover {
 .list-info {
 	padding-left: 30px;
 }
+/* SmartFarm 2026 palette refresh */
+:root {
+  --sf-green-900: #004d2f;
+  --sf-green-700: #1e7f3b;
+  --sf-green-600: #4ea628;
+  --sf-green-500: #7fbe14;
+  --sf-mint-100: #e9f5e8;
+  --sf-text-900: #0c3f2f;
+}
+
+body {
+  color: #23403a;
+  background-color: #f6faf6;
+}
+
+a,
+.text-primary,
+.be-top-header .navbar-brand,
+.be-top-header .be-toggle-top-header-menu .icon,
+.pagination > li > a,
+.pagination > li > span {
+  color: var(--sf-green-700) !important;
+}
+
+a:hover,
+a:focus,
+.text-primary:hover,
+.text-primary:focus {
+  color: var(--sf-green-900) !important;
+}
+
+.bg-primary,
+.label-primary,
+.badge-primary,
+.btn-primary,
+.panel-primary > .panel-heading,
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  background-color: var(--sf-green-700) !important;
+  border-color: var(--sf-green-700) !important;
+  color: #fff !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.open > .dropdown-toggle.btn-primary {
+  background-color: var(--sf-green-900) !important;
+  border-color: var(--sf-green-900) !important;
+}
+
+.be-left-sidebar .left-sidebar-content,
+.be-top-header {
+  background: linear-gradient(180deg, var(--sf-green-900) 0%, #035f36 100%);
+}
+
+.be-left-sidebar .sidebar-elements > li > a,
+.be-left-sidebar .sidebar-elements > li > a .icon,
+.be-top-header .navbar-nav > li > a {
+  color: #dff3df !important;
+}
+
+.be-left-sidebar .sidebar-elements > li.active > a,
+.be-left-sidebar .sidebar-elements > li > a:hover {
+  background-color: rgba(127, 190, 20, 0.16) !important;
+  color: #fff !important;
+}
+
+.be-left-sidebar .sidebar-elements > li.divider {
+  color: #9bdc78 !important;
+}
+
+.widget.widget-tile {
+  border-top: 3px solid var(--sf-green-600);
+  box-shadow: 0 2px 10px rgba(0, 77, 47, 0.08);
+}
+
+.panel,
+.card,
+.widget {
+  border-radius: 10px;
+}
+
+.tania h2 {
+  color: var(--sf-green-700);
+}
