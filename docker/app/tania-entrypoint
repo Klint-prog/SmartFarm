@@ -1,12 +1,15 @@
 #!/bin/sh
 set -e
 
-composer install 
+# Allow git commands inside bind-mounted repository paths.
+git config --global --add safe.directory /var/www || true
 
-chown www-data:www-data -R /var/www/var/cache
-chown www-data:www-data -R /var/www/var/logs
-chown www-data:www-data -R /var/www/var/sessions
+# Ensure writable runtime directories for the web user.
+mkdir -p /var/www/var/cache /var/www/var/logs /var/www/var/sessions
+chown www-data:www-data -R /var/www/var/cache /var/www/var/logs /var/www/var/sessions
 
+# Legacy project requires Composer v1-compatible plugin API.
+COMPOSER_ALLOW_SUPERUSER=1 composer install --no-interaction
 
 if [ ! -d /tmp ]; then
     mkdir -p /tmp
@@ -18,6 +21,4 @@ fi
 
 cat <> /tmp/stdout 1>&2 &
 
-
-# Needed for Alpine
-/usr/bin/supervisord -n -c /etc/supervisord.conf
+/usr/bin/supervisord -n -c /etc/supervisor/supervisord.conf
