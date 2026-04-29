@@ -59,6 +59,7 @@ VOLUME /var/www/var/cache
 WORKDIR /var/www
 EXPOSE 80
 
-RUN touch /var/www/.env
+RUN touch /var/www/.env \
+    && COMPOSER_ALLOW_SUPERUSER=1 composer install --no-autoloader --no-scripts --no-dev || true
 
 ENTRYPOINT ["/usr/local/bin/tania-entrypoint"]
