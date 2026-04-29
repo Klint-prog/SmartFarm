@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="main-content container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2 class="page-head-title">Central Administrativa da Fazenda</h2>
+      <p class="text-muted">Uma visão consolidada para gestão estratégica da operação agrícola.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-2 col-xs-6"><div class="widget widget-tile"><div class="data-info"><div class="value">{{ stats.farms }}</div><div class="desc">Fazendas</div></div></div></div>
+    <div class="col-sm-2 col-xs-6"><div class="widget widget-tile"><div class="data-info"><div class="value">{{ stats.areas }}</div><div class="desc">Áreas</div></div></div></div>
+    <div class="col-sm-2 col-xs-6"><div class="widget widget-tile"><div class="data-info"><div class="value">{{ stats.plants }}</div><div class="desc">Plantios</div></div></div></div>
+    <div class="col-sm-2 col-xs-6"><div class="widget widget-tile"><div class="data-info"><div class="value">{{ stats.tasks }}</div><div class="desc">Tarefas</div></div></div></div>
+    <div class="col-sm-2 col-xs-6"><div class="widget widget-tile"><div class="data-info"><div class="value">{{ stats.devices }}</div><div class="desc">Dispositivos</div></div></div></div>
+    <div class="col-sm-2 col-xs-6"><div class="widget widget-tile"><div class="data-info"><div class="value">{{ stats.reservoirs }}</div><div class="desc">Reservatórios</div></div></div></div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">Ações rápidas</div>
+        <div class="panel-body">
+          <a class="btn btn-primary" href="{{ path('fields_create') }}">Nova Fazenda</a>
+          <a class="btn btn-default" href="{{ path('areas_create') }}">Nova Área</a>
+          <a class="btn btn-success" href="{{ path('plants_create') }}">Novo Plantio</a>
+          <a class="btn btn-info" href="{{ path('tasks_create') }}">Nova Tarefa</a>
+          <a class="btn btn-warning" href="{{ path('devices_create') }}">Novo Dispositivo IoT</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

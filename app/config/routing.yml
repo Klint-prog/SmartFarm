@@ -13,6 +13,13 @@ dashboard_iot_stats:
     requirements: { trailingSlash : "[/]{0,1}", id: '\d+' }
     methods: [GET]
 
+
+admin_center:
+    path: /admin{trailingSlash}
+    defaults: { _controller: AppBundle:Admin:index, trailingSlash : "/" }
+    methods: [GET]
+    requirements: { trailingSlash : "[/]{0,1}" }
+
 fields:
     path: /farms{trailingSlash}
     defaults: { _controller: AppBundle:Field:index, trailingSlash : "/" }
